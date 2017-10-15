@@ -31,40 +31,28 @@ URxvt.font: xft:Inconsolata-g:medium:size=11
 URxvt.letterSpace: -1
 
 ! Colours
-URxvt.foreground:   #EFEFEF
-URxvt.background:   rgba:0000/0000/0000/cccc
-
-! Black + DarkGrey
-*.color0:       #000000
-*.color8:       #666666
-
-! DarkRed + Red
-*.color1:       #b45151
-*.color9:       #fe8686
-
-! DarkGreen + Green
-*.color2:       #aece92
-*.color10:      #97fa97
-
-! DarkYellow + Yellow
-*.color3:       Khaki3
-*.color11:      #efe58b
-
-! DarkBlue + Blue
-*.color4:       #2797d8
-*.color12:      #86cdea
-
-! DarkMangenta + Mangenta
-*.color5:       #aa6eaf
-*.color13:      #cb96ce
-
-! DarkCyan + Cyan
-*.color6:       #418179
-*.color14:      #71bebe
-
-! LightGrey + White
-*.color7:       #bebebe
-*.color15:      #ffffff
+!URxvt.foreground:   #EFEFEF
+!URxvt.background:   rgba:0000/0000/0000/cccc
 
 ! Cursor theme
 !Xcursor.theme: Jimmac
+
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
