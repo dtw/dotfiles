@@ -1,0 +1,70 @@
+! name.Class.resource: value
+
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+ 
+Xft.dpi: 96
+!Xft.antialias: false
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
+! Window basics
+URxvt.scrollBar:    False
+URxvt.reverseVideo: False
+URxvt.depth:		32
+
+! Scrollback
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! Font
+URxvt.font: xft:Inconsolata-g:medium:size=11
+URxvt.letterSpace: -1
+
+! Colours
+URxvt.foreground:   #EFEFEF
+URxvt.background:   rgba:0000/0000/0000/cccc
+
+! Black + DarkGrey
+*.color0:       #000000
+*.color8:       #666666
+
+! DarkRed + Red
+*.color1:       #b45151
+*.color9:       #fe8686
+
+! DarkGreen + Green
+*.color2:       #aece92
+*.color10:      #97fa97
+
+! DarkYellow + Yellow
+*.color3:       Khaki3
+*.color11:      #efe58b
+
+! DarkBlue + Blue
+*.color4:       #2797d8
+*.color12:      #86cdea
+
+! DarkMangenta + Mangenta
+*.color5:       #aa6eaf
+*.color13:      #cb96ce
+
+! DarkCyan + Cyan
+*.color6:       #418179
+*.color14:      #71bebe
+
+! LightGrey + White
+*.color7:       #bebebe
+*.color15:      #ffffff
+
+! Cursor theme
+!Xcursor.theme: Jimmac
