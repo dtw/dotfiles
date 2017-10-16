@@ -1,15 +1,27 @@
-source /etc/bash.colors
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+BLUE="\[$(tput setaf 4)\]"
+GREEN="\[$(tput setaf 2)\]"
+RESET="\[$(tput sgr0)\]"
 
 if [ -n "$SSH_CLIENT" ]; then
-	PS1="[@\[$IGreen\]\h\[$Color_Off\] \[$ICyan\]\W\[$Color_Off\]] $ "
+        PS1="[@$GREEN\h$RESET $BLUE\W$RESET] $ "
 else
-	PS1="[\[$ICyan\]\W\[$Color_Off\]] $ "
+        PS1="[$BLUE\W$RESET] $ "
 fi
 
 #alias spacman="sudo pacman"
 #alias svim="sudoedit"
 alias ls="ls --color"
-alias X="startx -- $@"
 alias wget="wget -t 2 --passive-ftp"
 alias ncmpc="ncmpc -e -h $HOSTNAME"
 alias tmux="tmux attach -d || tmux new"
@@ -17,7 +29,6 @@ alias tmux="tmux attach -d || tmux new"
 MANPATH=$MANPATH
 PATH=$HOME/bin:$PATH
 
-export OOO_FORCE_DESKTOP="gnome &"
 export VDPAU_DRIVER=va_gl
 export EDITOR="vim"
 export SUDO_EDITOR=vim
@@ -36,7 +47,7 @@ shopt -s histappend                      # append to history, don't overwrite it
 
 # Save the history after each command finishes
 #export PROMPT_COMMAND="history -a\; $PROMPT_COMMAND"
-export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history/$HOSTNAME/$(date "+%Y-%m-%d").log; fi'
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history/$HOSTNAME/$USER/$(date "+%Y-%m-%d").log; fi'
 complete -cf sudo
 complete -cf man
 
